@@ -1,230 +1,230 @@
 {
-	"textures": [
-		{
-			"image": "rocket-mouse.png",
-			"format": "RGBA8888",
-			"size": {
-				"w": 408,
-				"h": 386
-			},
-			"scale": 1,
-			"frames": [
-				{
-					"filename": "flame.png",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 44,
-						"h": 64
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 44,
-						"h": 64
-					},
-					"frame": {
-						"x": 1,
-						"y": 1,
-						"w": 44,
-						"h": 64
-					}
-				},
-				{
-					"filename": "flame2x.png",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 88,
-						"h": 128
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 88,
-						"h": 128
-					},
-					"frame": {
-						"x": 47,
-						"y": 1,
-						"w": 88,
-						"h": 128
-					}
-				},
-				{
-					"filename": "rocketmouse_dead01.png",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 134,
-						"h": 126
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 134,
-						"h": 126
-					},
-					"frame": {
-						"x": 137,
-						"y": 1,
-						"w": 134,
-						"h": 126
-					}
-				},
-				{
-					"filename": "rocketmouse_dead02.png",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 134,
-						"h": 126
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 134,
-						"h": 126
-					},
-					"frame": {
-						"x": 273,
-						"y": 1,
-						"w": 134,
-						"h": 126
-					}
-				},
-				{
-					"filename": "rocketmouse_fall01@2x.png",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 134,
-						"h": 126
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 134,
-						"h": 126
-					},
-					"frame": {
-						"x": 1,
-						"y": 131,
-						"w": 134,
-						"h": 126
-					}
-				},
-				{
-					"filename": "rocketmouse_fly01.png",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 134,
-						"h": 126
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 134,
-						"h": 126
-					},
-					"frame": {
-						"x": 137,
-						"y": 131,
-						"w": 134,
-						"h": 126
-					}
-				},
-				{
-					"filename": "rocketmouse_run01.png",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 134,
-						"h": 126
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 134,
-						"h": 126
-					},
-					"frame": {
-						"x": 273,
-						"y": 131,
-						"w": 134,
-						"h": 126
-					}
-				},
-				{
-					"filename": "rocketmouse_run02.png",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 134,
-						"h": 126
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 134,
-						"h": 126
-					},
-					"frame": {
-						"x": 1,
-						"y": 259,
-						"w": 134,
-						"h": 126
-					}
-				},
-				{
-					"filename": "rocketmouse_run03.png",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 134,
-						"h": 126
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 134,
-						"h": 126
-					},
-					"frame": {
-						"x": 137,
-						"y": 259,
-						"w": 134,
-						"h": 126
-					}
-				},
-				{
-					"filename": "rocketmouse_run04.png",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 134,
-						"h": 126
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 134,
-						"h": 126
-					},
-					"frame": {
-						"x": 273,
-						"y": 259,
-						"w": 134,
-						"h": 126
-					}
-				}
-			]
-		}
-	],
-	"meta": {
-		"app": "https://www.codeandweb.com/texturepacker",
-		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:0c9fe6e30a0df52154ae984c131f8653:98151234a25ba484691b2de3a30d5f68:313f07cac562cbc3006d7b8a9e70e85b$"
-	}
+  "textures": [
+    {
+      "image": "rocket-mouse.png",
+      "format": "RGBA8888",
+      "size": {
+        "w": 408,
+        "h": 386
+      },
+      "scale": 1,
+      "frames": [
+        {
+          "filename": "flame.png",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": {
+            "w": 44,
+            "h": 64
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 44,
+            "h": 64
+          },
+          "frame": {
+            "x": 1,
+            "y": 1,
+            "w": 44,
+            "h": 64
+          }
+        },
+        {
+          "filename": "flame2x.png",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": {
+            "w": 88,
+            "h": 128
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 88,
+            "h": 128
+          },
+          "frame": {
+            "x": 47,
+            "y": 1,
+            "w": 88,
+            "h": 128
+          }
+        },
+        {
+          "filename": "rocketmouse_dead01.png",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": {
+            "w": 134,
+            "h": 126
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 134,
+            "h": 126
+          },
+          "frame": {
+            "x": 137,
+            "y": 1,
+            "w": 134,
+            "h": 126
+          }
+        },
+        {
+          "filename": "rocketmouse_dead02.png",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": {
+            "w": 134,
+            "h": 126
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 134,
+            "h": 126
+          },
+          "frame": {
+            "x": 273,
+            "y": 1,
+            "w": 134,
+            "h": 126
+          }
+        },
+        {
+          "filename": "rocketmouse_fall01.png",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": {
+            "w": 134,
+            "h": 126
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 134,
+            "h": 126
+          },
+          "frame": {
+            "x": 1,
+            "y": 131,
+            "w": 134,
+            "h": 126
+          }
+        },
+        {
+          "filename": "rocketmouse_fly01.png",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": {
+            "w": 134,
+            "h": 126
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 134,
+            "h": 126
+          },
+          "frame": {
+            "x": 137,
+            "y": 131,
+            "w": 134,
+            "h": 126
+          }
+        },
+        {
+          "filename": "rocketmouse_run01.png",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": {
+            "w": 134,
+            "h": 126
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 134,
+            "h": 126
+          },
+          "frame": {
+            "x": 273,
+            "y": 131,
+            "w": 134,
+            "h": 126
+          }
+        },
+        {
+          "filename": "rocketmouse_run02.png",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": {
+            "w": 134,
+            "h": 126
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 134,
+            "h": 126
+          },
+          "frame": {
+            "x": 1,
+            "y": 259,
+            "w": 134,
+            "h": 126
+          }
+        },
+        {
+          "filename": "rocketmouse_run03.png",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": {
+            "w": 134,
+            "h": 126
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 134,
+            "h": 126
+          },
+          "frame": {
+            "x": 137,
+            "y": 259,
+            "w": 134,
+            "h": 126
+          }
+        },
+        {
+          "filename": "rocketmouse_run04.png",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": {
+            "w": 134,
+            "h": 126
+          },
+          "spriteSourceSize": {
+            "x": 0,
+            "y": 0,
+            "w": 134,
+            "h": 126
+          },
+          "frame": {
+            "x": 273,
+            "y": 259,
+            "w": 134,
+            "h": 126
+          }
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "app": "https://www.codeandweb.com/texturepacker",
+    "version": "3.0",
+    "smartupdate": "$TexturePacker:SmartUpdate:0c9fe6e30a0df52154ae984c131f8653:98151234a25ba484691b2de3a30d5f68:313f07cac562cbc3006d7b8a9e70e85b$"
+  }
 }
