@@ -31,7 +31,6 @@ export default class Preloader extends Phaser.Scene {
     )
 
     this.load.image(TextureKeys.Coin, 'house/object_coin.png')
-    // p82
   }
 
   create() {
