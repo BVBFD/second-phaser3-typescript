@@ -17,6 +17,65 @@ export default class RocketMouse extends Phaser.GameObjects.Container {
 
   private mouseState = MouseState.Running
 
+  private createAnimations() {
+    this.mouse.anims.create({
+      key: AnimationKeys.RocketMouseRun,
+      frames: this.mouse.anims.generateFrameNames(TextureKeys.RocketMouse, {
+        start: 1,
+        end: 4,
+        prefix: 'rocketmouse_run',
+        zeroPad: 2,
+        suffix: '.png',
+      }),
+      frameRate: 10,
+      repeat: -1,
+    })
+
+    this.mouse.anims.create({
+      key: AnimationKeys.RocketMouseRun,
+      frames: this.mouse.anims.generateFrameNames(TextureKeys.RocketMouse, {
+        start: 1,
+        end: 2,
+        prefix: 'flame',
+        suffix: '.png',
+      }),
+      frameRate: 10,
+      repeat: -1,
+    })
+
+    this.mouse.anims.create({
+      key: AnimationKeys.RocketMouseFall,
+      frames: [
+        {
+          key: TextureKeys.RocketMouse,
+          frame: 'rocketmouse_fall01.png',
+        },
+      ],
+    })
+
+    this.mouse.anims.create({
+      key: AnimationKeys.RocketMouseFly,
+      frames: [
+        {
+          key: TextureKeys.RocketMouse,
+          frame: 'rocketmouse_fly01.png',
+        },
+      ],
+    })
+
+    this.mouse.anims.create({
+      key: AnimationKeys.RocketMouseDead,
+      frames: this.mouse.anims.generateFrameNames(TextureKeys.RocketMouse, {
+        start: 1,
+        end: 2,
+        prefix: 'rocketmouse_dead',
+        zeroPad: 2,
+        suffix: '.png',
+      }),
+      frameRate: 10,
+    })
+  }
+
   constructor(scene: Phaser.Scene, x: number, y: number) {
     super(scene, x, y)
 
@@ -29,6 +88,8 @@ export default class RocketMouse extends Phaser.GameObjects.Container {
       .sprite(-63, -15, TextureKeys.RocketMouse)
       .play(AnimationKeys.RocketFlamesOn)
 
+    this.createAnimations()
+
     this.enableJetpack(false)
 
     this.add(this.flames)
@@ -37,9 +98,8 @@ export default class RocketMouse extends Phaser.GameObjects.Container {
     scene.physics.add.existing(this)
 
     const body = this.body as Phaser.Physics.Arcade.Body
-    body.setSize(this.mouse.width, this.mouse.height)
-    body.setOffset(this.mouse.width)
-    body.setOffset(this.mouse.width * -0.5, -this.mouse.height)
+    body.setSize(this.mouse.width * 0.5, this.mouse.height * 0.7)
+    body.setOffset(this.mouse.width * -0.3, -this.mouse.height + 15)
 
     this.cursors = scene.input.keyboard.createCursorKeys()
   }
