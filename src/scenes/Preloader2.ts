@@ -43,7 +43,7 @@ export default class Preloader2 extends Phaser.Scene {
     })
 
     this.anims.create({
-      key: 'rocketMouseRun',
+      key: 'rocketMouseFlameRun',
       frames: this.anims.generateFrameNames(TextureKeys2.RocketMouseAtlas, {
         start: 1,
         end: 2,
@@ -52,6 +52,38 @@ export default class Preloader2 extends Phaser.Scene {
       }),
       frameRate: 10,
       repeat: -1,
+    })
+
+    this.anims.create({
+      key: 'rocketMouseFall',
+      frames: [
+        {
+          key: TextureKeys2.RocketMouseAtlas,
+          frame: 'rocketmouse_fall01.png',
+        },
+      ],
+    })
+
+    this.anims.create({
+      key: 'rocketMouseFly',
+      frames: [
+        {
+          key: TextureKeys2.RocketMouseAtlas,
+          frame: 'rocketmouse_fly01.png',
+        },
+      ],
+    })
+
+    this.anims.create({
+      key: 'rocketMouseDead',
+      frames: this.anims.generateFrameNames(TextureKeys2.RocketMouseAtlas, {
+        start: 1,
+        end: 2,
+        prefix: 'rocketmouse_dead',
+        zeroPad: 2,
+        suffix: '.png',
+      }),
+      frameRate: 10,
     })
 
     this.scene.start('game2')
