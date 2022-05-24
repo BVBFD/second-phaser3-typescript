@@ -56,6 +56,8 @@ export default class RocketMouse2 extends Phaser.GameObjects.Container {
 
           if (body.blocked.down) {
             this.mouse.play('rocketMouseRun', true)
+          } else if (body.velocity.y > 0) {
+            this.mouse.play('rocketMouseFall', true)
           }
         }
         break
@@ -73,8 +75,24 @@ export default class RocketMouse2 extends Phaser.GameObjects.Container {
       case MouseState.Dead:
         {
           body.setVelocity(0, 0)
+          this.scene.scene.start('gameover2')
         }
         break
     }
+  }
+
+  kill() {
+    if (this.mouseState !== MouseState.Running) {
+      return
+    }
+
+    this.mouseState = MouseState.Killed
+
+    this.mouse.play('rocketMouseDead', true)
+
+    const body = this.body as Phaser.Physics.Arcade.Body
+    body.setAccelerationY(0)
+    body.setVelocity(1000, 0)
+    this.flame.setVisible(false)
   }
 }

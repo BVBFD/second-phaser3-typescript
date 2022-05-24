@@ -1,6 +1,7 @@
 import Phaser from 'phaser'
 import TextureKeys2 from '~/consts/TextureKeys2'
 import RocketMouse2 from './../game/RocketMouse2'
+import LaserObstacle2 from './../game/LaserObstacle2'
 
 export default class Game2 extends Phaser.Scene {
   private background!: Phaser.GameObjects.TileSprite
@@ -14,6 +15,8 @@ export default class Game2 extends Phaser.Scene {
   private bookcase1!: Phaser.GameObjects.Image
   private bookcase2!: Phaser.GameObjects.Image
   private bookcases: Phaser.GameObjects.Image[] = []
+
+  private laserObstacle2!: LaserObstacle2
 
   private coins!: Phaser.Physics.Arcade.StaticGroup
 
@@ -59,6 +62,9 @@ export default class Game2 extends Phaser.Scene {
 
     this.bookcases = [this.bookcase1, this.bookcase2]
 
+    this.laserObstacle2 = new LaserObstacle2(this, 1200, 300)
+    this.add.existing(this.laserObstacle2)
+
     this.coins = this.physics.add.staticGroup()
     this.spawnCoins()
 
@@ -71,6 +77,14 @@ export default class Game2 extends Phaser.Scene {
       this.coins,
       this.mouse,
       this.handleCollectCoins,
+      undefined,
+      this,
+    )
+
+    this.physics.add.overlap(
+      this.laserObstacle2,
+      this.mouse,
+      this.handleOverlapLaser,
       undefined,
       this,
     )
@@ -98,6 +112,7 @@ export default class Game2 extends Phaser.Scene {
 
     this.wrapWindows()
     this.wrapBookcases()
+    this.wrapLaserObstacle2()
 
     const coinsLength = this.coins.getLength()
     const lastCoinIndex = this.coins.children.entries[coinsLength - 1].body
@@ -108,6 +123,33 @@ export default class Game2 extends Phaser.Scene {
     }
 
     this.background.setTilePosition(scrollX)
+  }
+
+  private handleOverlapLaser(
+    obj1: Phaser.GameObjects.GameObject,
+    obj2: Phaser.GameObjects.GameObject,
+  ) {
+    this.mouse.kill()
+  }
+
+  private wrapLaserObstacle2() {
+    const scrollX = this.cameras.main.scrollX
+    const rightEdge = scrollX + this.scale.width
+
+    const body = this.laserObstacle2.body as Phaser.Physics.Arcade.StaticBody
+
+    const width = this.laserObstacle2.width
+    if (this.laserObstacle2.x + width < scrollX) {
+      this.laserObstacle2.x = Phaser.Math.Between(
+        rightEdge + width,
+        rightEdge + width + 1000,
+      )
+
+      this.laserObstacle2.y = Phaser.Math.Between(0, 300)
+
+      body.position.x = this.laserObstacle2.x + body.offset.x
+      body.position.y = this.laserObstacle2.y
+    }
   }
 
   private spawnCoins() {
@@ -138,8 +180,18 @@ export default class Game2 extends Phaser.Scene {
       body.setCircle(body.width * 0.5)
       body.enable = true
 
-      body.updateFromGameObject()
+      // const coin = this.coins.create(
+      //   x,
+      //   Phaser.Math.Between(100, this.scale.height - 100),
+      //   TextureKeys2.ObjectCoin,
+      // ) as Phaser.Physics.Arcade.Sprite
 
+      // const body = coin.body as Phaser.Physics.Arcade.StaticBody
+      // body.setCircle(body.width * 0.5)
+      // body.enable = true
+      // 이렇게 써도 된다!
+
+      body.updateFromGameObject()
       x += coin.width * 1.5
     }
   }
